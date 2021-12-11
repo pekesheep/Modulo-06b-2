@@ -12,32 +12,19 @@
 <body>
 
     <header id="title">
-        <h1 id="main-header">Carrito de la compra</h1>
+        <h1>Enigma</h1>
     </header>
     <main>
-        <div class="list-input-container">
-            <div id="product-list-container"> </div>
-            <div id="product-input-container"> </div>
+
+        <textarea id="encrypt-text" rows="10" placeholder="Escriba aquí su mensaje a encriptar..." oninput="activateBtn()"></textarea>
+
+        <div class="button-box">
+            <div><button id="encrypt-btn" onclick="encryptText()" disabled>Encrypt</button></div>
+            <div><button id="decrypt-btn" onclick="decryptText()" disabled>Decrypt</button></div>
         </div>
 
 
-        <div class="total-container">
-            <div>
-                <button id="button-calculate" onclick="calcTotal(products); ">Calcular</button>
-            </div>
-            <div class="total-result">
-                <h4>Subtotal: </h4>
-                <h3 id="subtotal"></h3>
-            </div>
-            <div class="total-result">
-                <h4>IVA: </h4>
-                <h3 id="taxes"></h3>
-            </div>
-            <div class="total-result">
-                <h4>TOTAL: </h4>
-                <h3 id="total"></h3>
-            </div>
-        </div>
+        <textarea id="decrypt-text" rows="10" placeholder="Escriba aquí su mensaje a desencriptar..."  oninput="activateBtn()"></textarea>
 
     </main>
 
